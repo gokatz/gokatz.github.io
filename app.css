@@ -5,6 +5,13 @@ body #app {
 .text-center {
   text-align: center; }
 
+a.white-link, a.white-link:hover, a.white-link:focus {
+  color: white; }
+
+a.white-link-no-decor, a.white-link-no-decor:hover, a.white-link-no-decor:focus {
+  color: white;
+  text-decoration: none; }
+
 hr.star-light,
 hr.star-primary {
   padding: 0;
