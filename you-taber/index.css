@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'Poppins-Light';
+  src: url('assets/Poppins-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('assets/Poppins-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, button, .modalDialog, input, textarea {
+  font-family: 'Poppins-Light', sans-serif;
+  font-weight: lighter;
+}
+
+.font-reg {
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+body.bodybg {
+  background-color: #03A9F4;
+}
+
+.bodybg {
+  background: url('assets/bg1.png') no-repeat center center fixed, url('assets/bg2.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  margin-top: 5%;
+}
+
+.product-hero img {
+  border-radius: 5px;
+  box-shadow: 0 0 25px 10px rgba(46,61,73,.2);
+  max-width: 386px;
+  width: 100%;
+}
+
+.product-hero, .product-desc {
+  margin-bottom: 30px;
+}
+
+.product-desc {
+  margin-top: 10%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.product-desc div {
+  color: #fae0ea;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.button {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.primary {
+  background: #bcfcfa;
+  border: 2px solid transparent;
+  transition: background 0.3s linear;
+}
+
+.primary:hover {
+  background: #99dedc;
+  transition: background 0.3s linear;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  transition: background 0.3s linear;
+}
+
+.secondary a, .primary a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.secondary:hover a, .primary:hover a {
+  color: #03a9f4;
+}
+
+.secondary:hover {
+  background: #fff;
+  transition: background 0.3s linear;
+}
+
+/* Modal */
+
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target {
+  opacity:1 !important;
+  pointer-events: auto;
+}
+.modalDialog > div {
+  width: 50%;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 5px;
+  background: #fff;
+  /*background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);*/
+}
+.close {
+  color: #606061;
+  line-height: 25px;
+  position: absolute;
+  font-size: 25px;
+  right: 8px;
+  text-align: center;
+  top: 8px;
+  border-radius: 50%;
+  width: 24px;
+  text-decoration: none;
+}
+.close:hover {
+  background: #aeeffb;
+}
+.modal-content-wrappe {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.release-section {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: #eee;
+  margin-bottom: 10px;
+}
+
+form input, form textarea {
+  border-radius: 5px;
+  border: 1px solid #b0b0b1;
+  font-size: 14px;
+}
+
+form input {
+  height: 40px;
+}

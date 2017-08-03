@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>You-Taber | Gokul Kathirvel</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap-grid.min.css">
+  </head>
+  <body class="bodybg">
+
+    <div class="container">
+      <div class="row">
+        <div class="offset-1 col-10">
+
+          <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 product-hero text-center">
+                <img src="assets/hero.png" class="img-fluid" height="504px;">
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 product-desc text-center">
+              <img src="assets/favicon.png" width="100px" height="100px">
+              <br> <br>
+              <div>Manage all your youtube tabs at one place. Play, Pause, Close and go to next tabs with <u> You-Taber</u> </div>
+              <br> <br>
+              <button class="btn button primary" name="button"> Get it Now </button>
+              <button id="releaseNotesButton" class="btn button secondary" name="button"> <a href="#ReleaseNotes"> Release Notes <a>  </button>
+              <button class="btn button secondary" name="button"> <a href="#FeedbackForm"> Feedback <a> </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="ReleaseNotes" class="modalDialog" style="opacity: 0">
+      <div>	<a href="#close" title="Close" class="close"> &times; </a>
+        <h2>Release Notes</h2>
+        <div class="modal-content-wrapper">
+          <div class="release-section">
+            <div class="font-reg"> <b><u>V 0.1.0</u></b> </div>
+            <ul>
+              <li> <b><u>Play, Pause and go to Next</u></b> song right from the pop-up </li>
+              <li>Hate the song? <b><u>Close the Tab!</u></b> yes, close it right away</li>
+              <li>Switch to the respective tabs (if you really want to 😉) with a click. <b><u>Stop searching</u></b> for tabs!</li>
+            </ul>
+          </div>
+          <div class="release-section text-center">Building cool stuffs... Stay tuned!!!</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="FeedbackForm" class="modalDialog" style="opacity: 0">
+      <div>	<a href="#close" title="Close" class="close"> &times; </a>
+        <div class="modal-content-wrapper">
+          <form name="contact" action="#close" netlify>
+            <p class="row">
+              <label class="col-4">Your Name:</label>
+              <input type="text" name="name" class="col-6">
+            </p>
+            <p class="row">
+              <label class="col-4">Email:</label>
+              <input type="email" name="email" class="col-6">
+            </p>
+            <p class="row">
+              <label class="col-4">Few Words:</label>
+              <textarea name="message" class="col-6" rows="5"></textarea>
+            </p>
+            <p class="text-center">
+              <button class="btn button primary" name="button" type="submit"> Send it out </button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script type="text/javascript">
+    $("#FeedbackForm").submit(function(e) {
+      e.preventDefault();
+
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+        alert("Thank you!");
+      });
+    });
+  </script>
+</html>
