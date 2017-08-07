@@ -169,3 +169,11 @@ form input, form textarea {
 form input {
   height: 40px;
 }
+
+.home-image {
+  border-radius: 100%;
+  border: 3px solid #bafdfb;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
